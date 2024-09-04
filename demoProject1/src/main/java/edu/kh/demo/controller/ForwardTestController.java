@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 // 2) 클래스에 작성된 내용대로 구현
 //			-> 스프링이 객체 생성 == Bean 등록 / Bean 생성
 
+// Annotation(@) : 컴파일러가 인식하는 주석
 @Controller
 public class ForwardTestController {
 	
@@ -69,7 +70,7 @@ public class ForwardTestController {
 	 * 특수한 경우를 제외하고
 	 * 매핑 주소 제일 앞에 "/"를 적지 않는다!!
 	 * */
-	@RequestMapping("forward")
+	@RequestMapping("forward") // /forward 요청 매핑(GET/POST 가리지 않음) 
 	public String forwardTest() {
 		
 		System.out.println("/forward 매핑 됐는지 확인");
@@ -87,6 +88,8 @@ public class ForwardTestController {
 		 * 	 forward할 html 파일의 경로 형태가 된다!!
 		 * */
 		
+		// classpath:/templates/forward.html
+		// classpath : 프로젝트 우클릭 -> Build Path 클릭 -> ConfigureBuildPath 클릭 -> source 탭에 있는 파일들
 		return "forward";
 	}
 }
