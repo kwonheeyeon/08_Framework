@@ -56,6 +56,9 @@ public class DBConfig {
 	//////////////////////////// Mybatis 설정 추가 ////////////////////////////
 	
 	// SqlSessionFactory : SqlSession을 만드는 객체 
+	// SqlSession : DB 연결 + SQL 파일 위치 등록
+	//						  + 마이바티스 설정 적용 + 클래스 별칭 등록
+
 	@Bean
 	public SqlSessionFactory sessionFactory(DataSource dataSource) throws Exception {
 		SqlSessionFactoryBean sessionFactoryBean = new SqlSessionFactoryBean();
