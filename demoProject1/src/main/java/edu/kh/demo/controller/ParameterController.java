@@ -48,7 +48,7 @@ public class ParameterController {
 	
 	// /param/test1 GET 방식 요청을 처리하는 메서드
 	
-	/* 1. HttpServeltRequest.getParameter("key") 사용하기 */
+	/* 1. HttpServletRequest.getParameter("key") 사용하기 */
 	
 	// HttpServletRequest
 	// - 요청한 클라이언트의 정보, 제출된 파라미터 등을 저장한 객체
